@@ -1,8 +1,11 @@
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
+
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
-import Hero from "./components/hero"
-import Articles_section from "./components/articles_section.jsx"
+
+import Home from "./pages/Home.jsx";
+import Articles from "./pages/Articles.jsx"
 
 // DUMMY POST DATA
 const POSTS = [
@@ -55,13 +58,15 @@ const AUTHORS = [
 ];
 
 
-
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Articles_section posts={POSTS} tags={TAGS} authors={AUTHORS}   />      
+      <Routes>
+        <Route path="/" element={<Home posts={POSTS} tags={TAGS} authors={AUTHORS} />} />
+        <Route path="/articles" element={<Articles />} />
+      </Routes>
+
       <Footer />
     </>
   );

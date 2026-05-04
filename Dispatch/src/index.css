@@ -64,7 +64,8 @@ body {
   gap: 2rem;
 }
 
-.navbar button {
+.navbar .nav-button {
+  text-decoration:none;
   border: none;
   font-size: 0.9rem;
   font-family: var(--font-m);
@@ -75,8 +76,8 @@ body {
   padding: 1rem;
 }
 
-.navbar-main button:hover,
-.navbar-main button.active {
+.navbar-main .nav-button:hover,
+.navbar-main .nav-button.active {
   background: rgb(42, 32, 18);
   border-radius: var(--r);
   color: var(--paper);
@@ -309,50 +310,58 @@ footer p {
   margin: 0.3rem 0rem;
 }
 
-.author{
-    display:flex;
-    justify-content:space-between;
+.author {
+  display: flex;
+  justify-content: space-between;
 }
 
-.author img{
-    width:10rem;
-    border-radius:50%;
+.author img {
+  width: 10rem;
+  border-radius: 50%;
 }
 
-.author span{
-    font-family:var(--font-b);
-    font-size:.8rem;
+.author span {
+  font-family: var(--font-b);
+  font-size: 0.8rem;
 }
 
-.author_articles{
-    font-family: var(--font-m);
+.author_articles {
+  font-family: var(--font-m);
 }
 
-.tag{
-    border: 1px solid var(--accent);
-    border-radius: var(--r);
-    font-size:.7rem;
-    padding: .3rem .5rem;
-    color: var(--accent);
-    background-color: transparent;
-    margin: .2rem;
+.tag {
+  border: 1px solid var(--accent);
+  border-radius: var(--r);
+  font-size: 0.7rem;
+  padding: 0.3rem 0.5rem;
+  color: var(--accent);
+  background-color: transparent;
+  margin: 0.2rem;
 }
 
 /* PAGINATION */
 
-.page-nav-buttons .numbers{
-    color: var(--ink);
-    background-color: transparent;
-    border: 1px solid var(--ink);
-    padding:.3rem .5rem;
-    width:2rem;
-    margin:4rem .2rem;
+.page-nav-buttons .numbers {
+  color: var(--ink);
+  background-color: transparent;
+  border: 1px solid var(--ink);
+  padding: 0.3rem 0.5rem;
+  width: 2rem;
+  margin: 4rem 0.2rem;
 }
 
-.previous, .next{
-    width:fit-content;
-    color: var(--ink);
-    border: 1px solid var(--ink);
-    padding:.3rem .5rem;
-    background-color:transparent;
+.previous,
+.next {
+  width: fit-content;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.3rem 0.5rem;
+  background-color: transparent;
+}
+
+/* REGISTER PAGE */
+
+.register-section {
+  background-color: var(--paper);
+  padding: 2rem;
 }
