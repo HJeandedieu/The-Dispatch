@@ -1,9 +1,19 @@
 function About({ authors, tags }) {
   return (
     <section className="about-section">
-      <div className="about-info">
+      <Dispatch_card title="about the dispatch" />
+      <Authors_card title="top contributors" authors={authors} />
+      <Tags_card title="tags" tags={tags} />      
+      
+    </section>
+  );
+}
+
+function Dispatch_card({title}){
+  return(
+    <div className="about-info">
         <div className="section-title">
-          <p>ABOUT THE DISPATCH</p>
+          <p>{title}</p>
           <span className="about-border"></span>
         </div>
         <div className="about-content">
@@ -14,10 +24,14 @@ function About({ authors, tags }) {
         </div>
         <button>Join Today</button>
       </div>
-      {/* AUTHORS SECTION */}
-      <div className="authors-section">
+  )
+}
+
+function Authors_card({ title,authors }){
+  return(
+    <div className="authors-section">
         <div className="section-title">
-          <p>TOP CONTRIBUTORS</p>
+          <p>{title}</p>
           <span className="about-border"></span>
         </div>
         <div className="authors-list">
@@ -32,9 +46,14 @@ function About({ authors, tags }) {
           ))}
         </div>
       </div>
-      <div className="tags-section">
+  )
+}
+
+function Tags_card({ title, tags }){
+  return (
+    <div className="tags-section">
         <div className="section-title">
-          <p>TAGS</p>
+          <p>{title}</p>
           <span className="about-border"></span>
         </div>
         <div className="all-tags">
@@ -45,8 +64,7 @@ function About({ authors, tags }) {
           ))}
         </div>
       </div>
-    </section>
-  );
+  )
 }
 
-export default About;
+export {About, Dispatch_card, Authors_card, Tags_card };
