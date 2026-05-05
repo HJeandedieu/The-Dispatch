@@ -1,4 +1,4 @@
-import About from "./about.jsx";
+import { About } from "./about.jsx";
 import Articles from "./articles";
 
 function Articles_section({ posts, authors, tags }) {

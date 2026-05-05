@@ -4,8 +4,8 @@ import { useState } from "react";
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
 
-import Home from "./pages/Home.jsx";
-import Articles from "./pages/Articles.jsx"
+import Home_page from "./pages/Home_page.jsx";
+import Articles_page from "./pages/Articles_page.jsx";
 
 // DUMMY POST DATA
 const POSTS = [
@@ -57,14 +57,16 @@ const AUTHORS = [
   { full_name: "Lena Fischer", posts: 9, profile_pic: "#" },
 ];
 
-
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home posts={POSTS} tags={TAGS} authors={AUTHORS} />} />
-        <Route path="/articles" element={<Articles />} />
+        <Route
+          path="/"
+          element={<Home_page posts={POSTS} tags={TAGS} authors={AUTHORS} />}
+        />
+        <Route path="/articles" element={<Articles_page posts={POSTS} tags={TAGS} authors={AUTHORS} />} />
       </Routes>
 
       <Footer />

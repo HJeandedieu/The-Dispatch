@@ -182,7 +182,7 @@ footer p {
   display: flex;
   justify-content: center;
   gap: 4rem;
-  margin: 0rem 12rem;
+  margin: 2rem 12rem;
 }
 
 .articles-intro {
@@ -287,6 +287,7 @@ footer p {
   color: var(--ink-muted);
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
 }
 
 .about-border {

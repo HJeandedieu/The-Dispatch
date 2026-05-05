@@ -1,7 +1,7 @@
-import Hero from "../components/hero";
+import Hero from "../components/hero.jsx";
 import Articles_section from "../components/articles_section.jsx";
 
-function Home({ posts, tags, authors }) {
+function Home_page({ posts, tags, authors }) {
   return (
     <>
       <Hero />
@@ -10,4 +10,4 @@ function Home({ posts, tags, authors }) {
   );
 }
 
-export default Home
+export default Home_page;
